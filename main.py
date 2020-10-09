@@ -4,6 +4,7 @@ import time
 import pandas as pd
 from datetime import datetime
 
+#Starting the session
 def sign_in(meetingid, pswd):
 
     subprocess.Popen('C:\\Program Files (x86)\\Webex\\Webex\\Applications\\ptoneclk.exe')
@@ -37,7 +38,40 @@ def sign_in(meetingid, pswd):
     pyautogui.moveTo(join_btn)
     pyautogui.click()
     pyautogui.press('enter')
-    
+
+# Ending the session
+def sign_out():
+
+    subprocess.Popen('C:\\Windows\\system32\\Taskmgr.exe')
+    time.sleep(10)
+
+    # Selecting the webex app 1
+
+    terminate_1 =  pyautogui.locateCenterOnScreen('webex1.png')
+    pyautogui.moveTo(terminate_1)
+    pyautogui.click()
+    pyautogui.click(button='right')
+
+    # End task 1
+
+    end_task = pyautogui.locateCenterOnScreen('end_task.png')
+    pyautogui.moveTo(end_task)
+    pyautogui.click()
+
+    # Selecting the webex app 2
+
+    terminate_1 =  pyautogui.locateCenterOnScreen('webex2.png')
+    pyautogui.moveTo(terminate_1)
+    pyautogui.click()
+    pyautogui.click(button='right')
+
+    # End task 2
+
+    end_task = pyautogui.locateCenterOnScreen('end_task.png')
+    pyautogui.moveTo(end_task)
+    pyautogui.click()
+
+
 # Reading the file
 df = pd.read_csv('timings.csv')
 
@@ -53,3 +87,18 @@ while True:
        sign_in(m_id, m_pswd)
        time.sleep(40)
        print('signed in')
+
+       if now in str(df['end']):
+            row = df.loc[df['end'] == now]
+            sign_out()
+            time.sleep(40)
+            print('signed out')
+
+
+
+
+
+
+
+
+
