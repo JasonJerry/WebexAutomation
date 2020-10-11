@@ -33,10 +33,13 @@ def sign_in(meetingid, pswd):
     pyautogui.write(pswd)
     pyautogui.press('enter')
 
+
+    time.sleep(15)
     # Hits the join meeting button
-    join_btn = pyautogui.locateAllOnScreen('join_meeting.png')
-    pyautogui.moveTo(join_btn)
-    pyautogui.click()
+
+    #join_btn = pyautogui.locateAllOnScreen('join_meeting.png')
+    #pyautogui.moveTo(join_btn)
+    #pyautogui.click()
     pyautogui.press('enter')
 
 # Ending the session
@@ -88,11 +91,11 @@ while True:
        time.sleep(40)
        print('signed in')
 
-       if now in str(df['end']):
-            row = df.loc[df['end'] == now]
-            sign_out()
-            time.sleep(40)
-            print('signed out')
+    #if now in str(df['end']):
+        #row = df.loc[df['end'] == now]
+        #sign_out()
+        #time.sleep(20)
+        #print('signed out')
 
 
 
