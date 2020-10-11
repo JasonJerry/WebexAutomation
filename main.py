@@ -13,10 +13,16 @@ def sign_in(meetingid, pswd):
 
     # Type the meeting ID
 
-    meeting_id_btn =  pyautogui.locateCenterOnScreen('alt_join.png')
+    meeting_id_btn =  pyautogui.locateCenterOnScreen('alt_join2.png')
     pyautogui.moveTo(meeting_id_btn)
-    pyautogui.press('delete')
     pyautogui.click()
+    time.sleep(2)
+
+    # Clearing the old ID
+    
+    pyautogui.press('backspace', presses=11)
+    
+    # Entering the ID
     
     pyautogui.write(meetingid)
     pyautogui.press('enter')
