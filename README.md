@@ -11,7 +11,18 @@
   <a href="https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="Maintenance"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Made%20with-Python-1f425f.svg" alt="made-with-python"></a>
 </p>
-This is a simple python program which can be used to automate joining class on Webex platform.
+
+
+# Usage Instruction
+
+```
+git clone https://github.com/JasonJerry/WebexAutomation.git
+cd WebexAutomation
+python main.py
+```
+
+- Install the prerequirements : pandas, pyautogui, subprocess using pip.
+- Give the input of your meeting credentials in the timings.csv file.
 
 # Things used
 
@@ -27,6 +38,7 @@ This is a simple python program which can be used to automate joining class on W
 - To exit the class at a specific time [ ADDED ON 11-10-2020 ]
 
 ## Contributions are welcome !
+
 <p>
 <img src="https://visitor-badge.laobi.icu/badge?page_id=JasonJerry.WebexAutomation" alt="visitor badge"/>
 </p>
