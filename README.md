@@ -16,7 +16,7 @@
 # Usage Instruction
 
 ```
-git clone https://github.com/JasonJerry/WebexAutomation.git
+git clone github.com/JasonJerry/WebexAutomation.git
 cd WebexAutomation
 python main.py
 ```
