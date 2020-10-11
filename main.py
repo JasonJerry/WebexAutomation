@@ -19,7 +19,7 @@ def sign_in(meetingid, pswd):
     time.sleep(2)
 
     # Clearing the old ID
-    
+
     pyautogui.press('backspace', presses=11)
     
     # Entering the ID
@@ -29,9 +29,9 @@ def sign_in(meetingid, pswd):
 
 
     # Hits the join button
-    join_btn = pyautogui.locateCenterOnScreen('join.png')
-    pyautogui.moveTo(join_btn)
-    pyautogui.click()
+    #join_btn = pyautogui.locateCenterOnScreen('join.png')
+    #pyautogui.moveTo(join_btn)
+    #pyautogui.click()
     time.sleep(10)
 
     #Types the password and hits enter
