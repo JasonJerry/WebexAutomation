@@ -36,6 +36,7 @@ python main.py
 - To add the mute and unmute function
 - To enhance the efficieny of the program
 - To exit the class at a specific time [ ADDED ON 11-10-2020 ]
+- To add join functionality using invite link [ Coming soon! ]
 
 ## Contributions are welcome !
 
